@@ -1,10 +1,13 @@
 /* seen on https://dev.to/alaskaa/how-to-import-a-web-font-into-your-react-app-with-styled-components-4-1dni */
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
+import GlobalFonts from './fonts/fonts';
 
-export const Grid = styled.div`
+export const Grid = css`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 `;
+
+
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -30,3 +33,5 @@ a {
 
 `;
 export default GlobalStyle;
+
+<GlobalFonts />

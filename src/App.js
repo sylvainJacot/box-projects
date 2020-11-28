@@ -1,22 +1,24 @@
 import { BrowserRouter as Router } from "react-router-dom";
+import styled from "styled-components";
 import GlobalStyle, { Grid } from "./components/01-atoms/globalStyle";
 import Header from "./components/03-organisms/header";
 
-import HomePage from "./components/04-pages/HomePage";
 import AppRoutes from "./components/_routes/routes";
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer>
       <Router>
-        <Grid>
-          <GlobalStyle />
-          <Header />
-          <AppRoutes />
-        </Grid>
+        <GlobalStyle />
+        <Header />
+        <AppRoutes />
       </Router>
-    </div>
+    </AppContainer>
   );
 }
 
 export default App;
+
+export const AppContainer = styled.div`
+
+`;
