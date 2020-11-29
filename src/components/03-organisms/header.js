@@ -35,10 +35,11 @@ export const HeaderContainer = styled.div`
   width: 24rem;
   height: 100vh;
   background-color: ${colorsRoles.DarkGrey};
+  z-index: 1;
 `;
 export const LogoContainer = styled.div`
   height: 10rem;
-  background-color: green;
+  background-color: pink;
   display: flex;
 
   h1 {
