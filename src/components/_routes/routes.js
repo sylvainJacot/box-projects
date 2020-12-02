@@ -8,11 +8,11 @@ import ErrorPage from "../04-pages/ErrorPage";
 
 
 const Routes = [
-  {
-    path: paths.home,
-    exact: true,
-    component: HomePage,
-  },
+  // {
+  //   path: paths.home,
+  //   exact: true,
+  //   component: HomePage,
+  // },
   {
     path: paths.ScrollVideo,
     exact: true,
