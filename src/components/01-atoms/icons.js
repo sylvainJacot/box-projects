@@ -11,10 +11,10 @@ export const LogoJacotStudio = ({Size, CircleColor, FillColor}) => {
           <rect
             width={Size}
             height={Size}
-            x="19.9999583"
-            y="20"
+            x="24"
+            y="24"
             fill={CircleColor}
-            rx="20"
+            rx="32"
           />
           <path
             fill={FillColor}

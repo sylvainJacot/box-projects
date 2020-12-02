@@ -1,4 +1,4 @@
 export const paths = {
-    home : "/",
-    ScrollVideo : "/ScrollVideo"
+    // home : "/",
+    ScrollVideo : "/"
 }
