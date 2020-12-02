@@ -1,26 +1,25 @@
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
-import { colorsRoles } from "../../01-atoms/colors";
 import { ScrollTrigger } from "gsap/all";
 import VideoSrc from "../../_media/video-264-960.mp4";
-import Slide1 from "../../03-organisms/ScrollVideo/Slide1";
+import Slide from "../../03-organisms/ScrollVideo/Slide";
 
 export default function ScrollVideo() {
   gsap.registerPlugin(ScrollTrigger);
 
-  const viewVideoRef = useRef();
-  const videoRef = useRef();
-  const pinDiv = useRef();
+  const viewVideoRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
+    console.log(videoRef.current);
+
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: viewVideoRef.current,
-        pin: pinDiv.current,
         start: "top bottom",
         end: "bottom top",
-        markers: true,
+        markers: false,
         scrub: true,
       },
     });
@@ -31,7 +30,7 @@ export default function ScrollVideo() {
         scale: 0.5,
       },
       {
-        currentTime: videoRef.current.duration || 10,
+        currentTime: videoRef.current.duration || 13,
         scale: 1,
       }
     );
@@ -50,10 +49,10 @@ export default function ScrollVideo() {
             webkit-playsinline="true"
           ></Video>
         </VideoContainer>
-        <Slide1 topPos={"0"} content={"Title 1"} ref={pinDiv}/>
-        <Slide1 topPos={"100vh"} content={"Title 2"} ref={pinDiv}/>
-        <Slide1 topPos={"200vh"} content={"Title 3"} ref={pinDiv}/>
-        <Slide1 topPos={"400vh"} content={"The End"} ref={pinDiv}/>
+        <Slide topPos={"100vh"} content={"Title 1"} />
+        <Slide topPos={"200vh"} content={"Title 2 with a bit of content"} />
+        <Slide topPos={"300vh"} content={"Title 3 with a bit of content and an extra more"} NegBg={true}/>
+        <Slide topPos={"400vh"} content={"The End"} />
       </ScrollVideoContainer>
     </>
   );
@@ -62,10 +61,9 @@ export default function ScrollVideo() {
 export const ScrollVideoContainer = styled.div`
   position: relative;
   background-color: grey;
-  width: 100%;
+  width: calc(100% - 24rem);
   height: 500vh;
-  padding-left: 24rem;
-  overflow-x: hidden;
+  margin-left: 24rem;
 `;
 
 export const VideoContainer = styled.div`
