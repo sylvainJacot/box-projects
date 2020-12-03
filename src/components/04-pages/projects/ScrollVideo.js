@@ -20,7 +20,7 @@ export default function ScrollVideo() {
         start: "top bottom",
         end: "bottom top",
         markers: false,
-        scrub: true,
+        scrub: 3,
       },
     });
     tl.fromTo(
@@ -49,10 +49,13 @@ export default function ScrollVideo() {
             webkit-playsinline="true"
           ></Video>
         </VideoContainer>
-        <Slide topPos={"100vh"} content={"Title 1"} />
-        <Slide topPos={"200vh"} content={"Title 2 with a bit of content"} />
-        <Slide topPos={"300vh"} content={"Title 3 with a bit of content and an extra more"} NegBg={true}/>
-        <Slide topPos={"400vh"} content={"The End"} />
+        <Slide topPos={"50vh"} content={"Title 1"} />
+        <Slide topPos={"150vh"} content={"Title 2 with a bit of content"} />
+        <Slide
+          topPos={"250vh"}
+          content={"Title 3 with a bit of content and an extra more"}
+        />
+        <Slide topPos={"400vh"} content={"The End"} end={true} />
       </ScrollVideoContainer>
     </>
   );
@@ -60,7 +63,7 @@ export default function ScrollVideo() {
 
 export const ScrollVideoContainer = styled.div`
   position: relative;
-  background-color: grey;
+  background-color: red;
   width: calc(100% - 24rem);
   height: 500vh;
   margin-left: 24rem;
@@ -79,6 +82,6 @@ export const Video = styled.video`
   left: calc(50% + 12rem);
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
+  height: 64%;
   width: auto;
 `;

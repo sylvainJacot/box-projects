@@ -9,6 +9,7 @@ const LinksBlock = () => {
     <>
       <Block>
         <StyledLink to={paths.ScrollVideo}>Scroll Video</StyledLink>
+        <StyledLink to={paths.ButtonComponent}>Button Component</StyledLink>
       </Block>
     </>
   );
@@ -18,14 +19,20 @@ export default LinksBlock;
 
 export const Block = styled.ul`
   width: 100%;
+  height: 100%;
   padding: 3rem 0;
 `;
 export const StyledLink = styled(Link)`
+  display: block;
+  width: 100%;
   font-family: "Roboto";
   font-size: 2rem;
   color: ${colorsRoles.DarkGrey};
+  margin-bottom: 2rem;
 
-  &:hover {
-      color: ${colorsRoles.Brand02};
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${colorsRoles.Brand02};
   }
 `;
