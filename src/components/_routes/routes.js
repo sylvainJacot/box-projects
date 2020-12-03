@@ -2,7 +2,6 @@ import { Route, Switch } from "react-router-dom";
 
 import { paths } from "../_routes/routes-paths";
 
-import HomePage from "../04-pages/HomePage";
 import ScrollVideo from "../04-pages/projects/ScrollVideo";
 import ButtonComponent from "../04-pages/projects/ButtonComponent";
 import ScrollAnimations from "../04-pages/projects/ScrollAnimations"

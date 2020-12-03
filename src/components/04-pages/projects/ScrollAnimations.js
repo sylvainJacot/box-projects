@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import styled from "styled-components";
-import { ProjectWidth } from "../../01-atoms/globalStyle";
 import MainPicHeader from "../../03-organisms/ScrollAnimations/MainPicHeader";
 import {
   MainPicAnimStart,
