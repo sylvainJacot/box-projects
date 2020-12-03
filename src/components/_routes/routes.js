@@ -5,6 +5,7 @@ import { paths } from "../_routes/routes-paths";
 import HomePage from "../04-pages/HomePage";
 import ScrollVideo from "../04-pages/projects/ScrollVideo";
 import ButtonComponent from "../04-pages/projects/ButtonComponent";
+import ScrollAnimations from "../04-pages/projects/ScrollAnimations"
 import ErrorPage from "../04-pages/ErrorPage";
 
 const Routes = [
@@ -23,6 +24,11 @@ const Routes = [
     exact: true,
     component: ButtonComponent,
   },
+  {
+    path: paths.ScrollAnimations,
+    exact: true,
+    component: ScrollAnimations,
+  }
 ];
 
 const AppRoutes = () => {
