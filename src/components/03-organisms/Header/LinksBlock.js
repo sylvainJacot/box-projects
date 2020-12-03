@@ -9,6 +9,7 @@ const LinksBlock = () => {
     <>
       <Block>
         <StyledLink to={paths.ScrollVideo}>Scroll Video</StyledLink>
+        <StyledLink to={paths.ScrollAnimations}>Scroll Animations</StyledLink>
         <StyledLink to={paths.ButtonComponent}>Button Component</StyledLink>
       </Block>
     </>

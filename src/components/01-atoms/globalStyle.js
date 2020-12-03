@@ -7,6 +7,11 @@ export const Grid = css`
   grid-template-columns: repeat(12, 1fr);
 `;
 
+export const ProjectWidth = css`
+  width: calc(100% - 24rem);
+  margin-left: 24rem;
+`
+
 
 
 const GlobalStyle = createGlobalStyle`
