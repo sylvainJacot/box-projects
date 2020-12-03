@@ -1,11 +1,11 @@
 import { Route, Switch } from "react-router-dom";
 
-import {paths} from "../_routes/routes-paths";
+import { paths } from "../_routes/routes-paths";
 
 import HomePage from "../04-pages/HomePage";
 import ScrollVideo from "../04-pages/projects/ScrollVideo";
+import ButtonComponent from "../04-pages/projects/ButtonComponent";
 import ErrorPage from "../04-pages/ErrorPage";
-
 
 const Routes = [
   // {
@@ -18,7 +18,11 @@ const Routes = [
     exact: true,
     component: ScrollVideo,
   },
-
+  {
+    path: paths.ButtonComponent,
+    exact: true,
+    component: ButtonComponent,
+  },
 ];
 
 const AppRoutes = () => {

@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 
-const Slide = ({ topPos, content, NegBg }) => {
+const Slide = ({ topPos, content, NegBg, end }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   const TitlesWrapperRef = useRef(null);
@@ -28,9 +28,9 @@ const Slide = ({ topPos, content, NegBg }) => {
 
   return (
     <>
-      <Container topPos={topPos} ref={ContainerRef}>
+      <Container topPos={topPos} ref={ContainerRef} end={end}>
         <TitleWrapper ref={TitlesWrapperRef} NegBg={NegBg}>
-          <Title NegBg={NegBg}>{content}</Title>
+          <Title NegBg={NegBg} end={end}>{content}</Title>
         </TitleWrapper>
       </Container>
     </>
@@ -48,6 +48,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => (props.end ? "white" : "none")};
 `;
 
 export const TitleWrapper = styled.div`
@@ -62,7 +63,7 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h1`
   font-size: 10rem;
-  color: ${(props) => (props.NegBg ? "black" : "white")};
+  color: ${(props) => (props.end ? "black" : "white")};
   margin: 0;
   text-align: center;
   width: ${(props) => (props.NegBg ? "50%" : "100%")};

@@ -1,4 +1,5 @@
 export const paths = {
-    // home : "/",
-    ScrollVideo : "/"
-}
+  // home : "/",
+  ScrollVideo: "/",
+  ButtonComponent: "/ButtonComponent",
+};

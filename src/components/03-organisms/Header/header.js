@@ -12,9 +12,9 @@ export default function Header() {
         <LogoContainer>
           <Link to={paths.home}>
             <LogoJacotStudio
-              Size={"4rem"}
+              Size={"3rem"}
               CircleColor={"transparent"}
-              FillColor={colorsRoles.DarkGrey}
+              FillColor={colorsRoles.Brand02}
             />
           </Link>
           <h1>Projects</h1>
@@ -45,6 +45,7 @@ export const LogoContainer = styled.div`
   h1 {
     font-family: "Play Fair";
     font-size: 3rem;
+    line-height: 4rem;
     color: ${colorsRoles.DarkGrey};
     margin-left: 1rem;
   }
